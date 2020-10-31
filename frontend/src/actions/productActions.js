@@ -24,6 +24,9 @@ export const listProducts = () => async (dispatch) => {
       type: PRODUCT_LIST_FAIL,
       payload: error.response && error.response.data.message ? error.response.data.message : error.message,
       // If it has a non generic(our made error) error than give us our error if not then the default
+      // Also this gets the error from the backend shows it in the frontend (redux devtools)
     })
   }
 }
+
+// ACTIONS GET FIRED OFF ON COMPONENTS IN THIS CASE THIS ONE IN HomeScreen.js
