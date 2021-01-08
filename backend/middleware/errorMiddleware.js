@@ -4,7 +4,6 @@ const notFound = (req, res, next) => {
   next(error)
 }
 
-// custom error middleware - overwrite the default error
 const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode
   res.status(statusCode)
